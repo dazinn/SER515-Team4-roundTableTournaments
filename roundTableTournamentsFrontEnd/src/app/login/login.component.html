@@ -1,6 +1,29 @@
+<!-- Temporary page description -->
 <p>This will be the login component. Users will be able to log in to an existing account or sign up for a new one.</p>
 
-<!-- TODO: Add text field for username and password -->
-<!-- TODO: Add option to create new account -->
 
+<!-- Input fields for existing account -->
+<h3>Log into an existing account</h3>
+<label for="username">Username </label> 
+<input id ="username" name="username" type="text"> <br>
+<label for="password">Password </label> 
+<input id ="password" name="password" type="password"> <br>
+
+<button>Login</button>
+<br><br>
+
+<!-- Input fields for creating a new account -->
+<h3>Or, create a new account</h3>
+<label for="newUsername">Username </label> 
+<input id ="newUsername" name="newUsername" type="text"> <br>
+<label for="email">Email </label> 
+<input id ="email" name="email" type="text"> <br>
+<label for="newPassword">Password </label> 
+<input id ="newPassword" name="newPassword" type="password"> <br>
+
+<button>Create account</button>
+<br><br>
+
+
+<!-- This clickable text will link to the homepage component -->
 <a routerLink="/" routerLinkActive="active">Back to Home</a>
