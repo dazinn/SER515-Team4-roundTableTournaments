@@ -1,0 +1,8 @@
+{
+    "name": "RoundTableTournamentsFrontEnd",
+    "productName": "Round Table Tournaments",
+    "version": "1.0.0",
+    "description": "Application for Rount Table Tournaments",
+    "main": "electron.prod.js",
+    "license": "none"
+}
