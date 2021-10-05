@@ -1,0 +1,23 @@
+/* Styling for navigation component */
+
+.nav-wrapper {
+    background-color: dimgray;
+        
+}
+
+ul {
+    background-color: darkorchid;
+    list-style-type: none; /* This attribute removes the bullet points in the list when set to "none" */
+    padding: 0px;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    background-color: rgb(110, 196, 196);
+    color: black;
+    padding: 15px 20px;
+    text-decoration: none; /* This attribute removes the decoration on text. In this case, the underlining of link items */
+}
