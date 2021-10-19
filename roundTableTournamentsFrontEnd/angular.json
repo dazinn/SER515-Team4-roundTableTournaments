@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "roundTableTournamentsFrontEnd"
+    }
+  },
+  "defaultProject": "roundTableTournamentsFrontEnd",
+  "cli": {
+    "analytics": "d2afa45f-8dfb-4918-9a57-288b580f20de"
+  }
 }
