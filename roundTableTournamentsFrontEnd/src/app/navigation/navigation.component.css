@@ -1,0 +1,39 @@
+/* Styling for navigation component */
+
+
+/* Sytling for nav-wrapper (a div tag class to hold the buttons for navigation). */
+.nav-wrapper {
+    background-color: dimgray;
+        
+}
+
+/* Styling for list elements. */
+ul {
+    background-color: darkorchid;
+    list-style-type: none; /* This attribute removes the bullet points in the list when set to "none" */
+    padding: 0px;
+}
+
+/* Styling for list items. */
+li {
+    float: left;
+}
+
+/* Styling for elements with <li> and <a> tags (navigation buttons).  */
+li a {
+    background-color: rgb(110, 196, 196);
+    color: black;
+    padding: 15px 20px;
+    text-decoration: none; /* This attribute removes the decoration on text. In this case, the underlining of link items */
+}
+
+/* When the user hovers over an element with the tags <li> and <a> (in this app,
+*  that means one of the buttons on the navigation bar), the following style
+*  will be applied:
+*/
+li a:hover {
+    background-color: grey; 
+    color: white; /* Text color */
+    border-color: black;
+    border-style: solid;
+}

@@ -4,6 +4,8 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomepageComponent } from './homepage/homepage.component';
 import { LoginComponent } from './login/login.component';
+import { NavigationComponent } from './navigation/navigation.component';
+import { ResultsComponent } from './results/results.component';
 
 /* Array of different routes which can be displayed, in the form:
 *  { path: '<pathName>', component: <ComponentName> }
@@ -13,7 +15,9 @@ import { LoginComponent } from './login/login.component';
 */
 const routes: Routes = [
   { path: '', component: HomepageComponent},
-  { path: 'login', component: LoginComponent}
+  { path: 'login', component: LoginComponent},
+  { path: 'navigation', component: NavigationComponent},
+  { path: 'results', component: ResultsComponent}
 ];
 
 @NgModule({
