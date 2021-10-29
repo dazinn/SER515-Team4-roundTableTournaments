@@ -8,6 +8,7 @@ import { LoginComponent } from './login/login.component';
 import { ButtonComponent } from './components/button/button.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { ResultsComponent } from './results/results.component';
+import { TeamDirectorComponent } from './team-director/team-director.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { ResultsComponent } from './results/results.component';
     LoginComponent,
     ButtonComponent,
     NavigationComponent,
-    ResultsComponent
+    ResultsComponent,
+    TeamDirectorComponent
   ],
   imports: [
     BrowserModule,
