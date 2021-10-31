@@ -25,9 +25,9 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent},
   { path: 'navigation', component: NavigationComponent},
   { path: 'results', component: ResultsComponent},
-  { path: 'referee-director', component: RefereeDirectorComponent}
-  { path: 'field-director', component: FieldDirectorComponent}
-  { path: 'team-director', component: TeamDirectorComponent}
+  { path: 'referee-director', component: RefereeDirectorComponent},
+  { path: 'field-director', component: FieldDirectorComponent},
+  { path: 'team-director', component: TeamDirectorComponent},
   { path: 'tournament-director', component: TournamentDirectorComponent}
  
  
