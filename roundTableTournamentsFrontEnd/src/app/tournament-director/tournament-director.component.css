@@ -1,0 +1,9 @@
+.generic-info-wrapper {
+    background-color: lightgrey;
+    border-color: black;
+    border-style: solid;
+    padding: 5px;
+    font-size: large;
+    box-shadow: 5px 5px 5px grey;
+    max-width: 1000px;
+}
