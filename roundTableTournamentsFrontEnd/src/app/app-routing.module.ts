@@ -7,6 +7,8 @@ import { LoginComponent } from './login/login.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { ResultsComponent } from './results/results.component';
 import { TeamDirectorComponent } from './team-director/team-director.component';
+import { TournamentDirectorComponent } from './tournament-director/tournament-director.component';
+ 
 
 /* Array of different routes which can be displayed, in the form:
 *  { path: '<pathName>', component: <ComponentName> }
@@ -20,7 +22,8 @@ const routes: Routes = [
   { path: 'navigation', component: NavigationComponent},
   { path: 'results', component: ResultsComponent},
   { path: 'team-director', component: TeamDirectorComponent}
-
+  { path: 'tournament-director', component: TournamentDirectorComponent}
+ 
 ];
 
 @NgModule({
