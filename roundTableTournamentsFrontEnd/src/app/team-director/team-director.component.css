@@ -1,0 +1,20 @@
+.match-Info{
+    background-color: rgb(238, 92, 153);
+    border-color: rgb(80, 42, 42);
+    border-style: solid;
+    padding: 5px;
+    font-size: large;
+    box-shadow: 5px 5px 5px rgb(155, 97, 97);
+    max-width: 1000px;
+
+}
+.Team{
+    background-color: rgb(240, 154, 194);
+    border-color: rgb(78, 53, 63);
+    border-style: solid;
+    padding: 5px;
+    font-size: large;
+    box-shadow: 5px 5px 5px rgb(194, 186, 186);
+    max-width: 1000px;
+
+}

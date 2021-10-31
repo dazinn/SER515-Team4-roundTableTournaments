@@ -1,0 +1,20 @@
+.field-director-Info{
+    background-color: rgb(238, 166, 98);
+    border-color: rgb(133, 109, 74);
+    border-style: solid;
+    padding: 5px;
+    font-size: large;
+    box-shadow: 5px 5px 5px rgb(85, 70, 20);
+    max-width: 1000px;
+
+}
+.Field{
+    background-color: rgb(243, 170, 122);
+    border-color: rgb(145, 101, 61);
+    border-style: solid;
+    padding: 5px;
+    font-size: large;
+    box-shadow: 5px 5px 5px rgb(114, 71, 46);
+    max-width: 1000px;
+
+}
