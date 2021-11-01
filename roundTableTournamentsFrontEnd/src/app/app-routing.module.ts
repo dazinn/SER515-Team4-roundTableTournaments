@@ -10,9 +10,8 @@ import { RefereeDirectorComponent } from './referee-director/referee-director.co
 import { FieldDirectorComponent } from './field-director/field-director.component';
 import { TeamDirectorComponent } from './team-director/team-director.component';
 import { TournamentDirectorComponent } from './tournament-director/tournament-director.component';
- 
- 
- 
+import { RegisterComponent } from './register/register.component';
+
 
 /* Array of different routes which can be displayed, in the form:
 *  { path: '<pathName>', component: <ComponentName> }
@@ -28,10 +27,8 @@ const routes: Routes = [
   { path: 'referee-director', component: RefereeDirectorComponent},
   { path: 'field-director', component: FieldDirectorComponent},
   { path: 'team-director', component: TeamDirectorComponent},
-  { path: 'tournament-director', component: TournamentDirectorComponent}
- 
- 
- 
+  { path: 'tournament-director', component: TournamentDirectorComponent},
+  { path: 'register', component: RegisterComponent}
 ];
 
 @NgModule({

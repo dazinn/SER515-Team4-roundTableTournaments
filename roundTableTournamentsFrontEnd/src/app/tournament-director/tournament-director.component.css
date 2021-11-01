@@ -1,20 +1,10 @@
-.tournament-director-Info{
-    background-color: rgb(245, 199, 247);
-    border-color: rgb(68, 59, 70);
+
+.generic-info-wrapper {
+    background-color: lightgrey;
+    border-color: black;
     border-style: solid;
     padding: 5px;
     font-size: large;
-    box-shadow: 5px 5px 5px rgb(146, 196, 196);
+    box-shadow: 5px 5px 5px grey;
     max-width: 1000px;
-
-}
-.Tournament{
-    background-color: rgb(238, 200, 240);
-    border-color: rgb(81, 72, 83);
-    border-style: solid;
-    padding: 5px;
-    font-size: large;
-    box-shadow: 5px 5px 5px rgb(134, 197, 192);
-    max-width: 1000px;
-
 }

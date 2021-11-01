@@ -1,21 +1,10 @@
 
-.referee-Info{
-    background-color: rgb(219, 233, 141);
-    border-color: rgb(0, 0, 0);
+.referee-info {
+    background-color: rgb(201, 230, 40);
+    border-color: black;
     border-style: solid;
     padding: 5px;
     font-size: large;
-    box-shadow: 5px 5px 5px rgb(148, 139, 90);
+    box-shadow: 5px 5px 5px grey;
     max-width: 1000px;
-
-}
-.referee-login{
-    background-color: rgb(230, 243, 159);
-    border-color: rgb(0, 0, 0);
-    border-style: solid;
-    padding: 5px;
-    font-size: large;
-    box-shadow: 5px 5px 5px rgb(146, 137, 88);
-    max-width: 1000px;
-
 }

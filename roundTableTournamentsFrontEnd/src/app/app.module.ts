@@ -9,7 +9,7 @@ import { NavigationComponent } from './navigation/navigation.component';
 import { ResultsComponent } from './results/results.component';  
 import { TournamentDirectorComponent } from './tournament-director/tournament-director.component';
 import { TeamDirectorComponent } from './team-director/team-director.component'; 
- 
+import { RegisterComponent } from './register/register.component';
 
 
 
@@ -22,7 +22,8 @@ import { TeamDirectorComponent } from './team-director/team-director.component';
     NavigationComponent,
     ResultsComponent,
     TournamentDirectorComponent,
-    TeamDirectorComponent
+    TeamDirectorComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
