@@ -1,0 +1,10 @@
+
+.field-info {
+    background-color: rgb(188, 247, 198);
+    border-color: black;
+    border-style: solid;
+    padding: 5px;
+    font-size: large;
+    box-shadow: 5px 5px 5px rgb(190, 235, 229);
+    max-width: 1000px;
+}

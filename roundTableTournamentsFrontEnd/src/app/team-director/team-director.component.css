@@ -1,0 +1,10 @@
+
+.team-info {
+    background-color: rgb(238, 163, 163);
+    border-color: black;
+    border-style: solid;
+    padding: 5px;
+    font-size: large;
+    box-shadow: 5px 5px 5px rgb(99, 80, 80);
+    max-width: 1000px;
+}
