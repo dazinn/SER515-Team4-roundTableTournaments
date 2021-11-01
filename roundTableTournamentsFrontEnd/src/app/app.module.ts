@@ -9,7 +9,6 @@ import { NavigationComponent } from './navigation/navigation.component';
 import { ResultsComponent } from './results/results.component';  
 import { TournamentDirectorComponent } from './tournament-director/tournament-director.component';
 import { TeamDirectorComponent } from './team-director/team-director.component'; 
-import { ResultsComponent } from './results/results.component';
 import { RegisterComponent } from './register/register.component';
 
 
