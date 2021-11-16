@@ -1,9 +1,11 @@
 <h3>Registration</h3>
 
-<p>Please fill out the form below to register your team. </p>
+<p>Please fill out the form below to register your team. The registration fee is <b>$100.</b> </p>
 <br>
 
 <div class="registration-input-wrapper">
+
+    <h4><u>Team Information</u></h4>
 
     <label for="teamName" style="text-align: center;">Team Name </label> 
     <input id ="teamName" name="teamName" type="text"> <br>
@@ -36,13 +38,30 @@
         <option value="u9">U18</option>
         <option value="u9">18+</option>
         <option value="u9">O48</option>
-    </select> <br>
+    </select> <br> <br>
+
+
+    <h4><u>Payment Information</u></h4>
+
+    <label for="cardNum" style="text-align: center;">Card Number </label> 
+    <input id ="cardNum" name="cardNum" type="text" > <br>
+
+    <label for="cardHolder" style="text-align: center;">Name on Card </label> 
+    <input id ="cardHolder" name="cardHolder" type="text" > <br>
+
+    <label for="expirationDate" style="text-align: center;">Expiration Date </label> 
+    <input id ="expirationDate" name="expirationDate" type="date" > <br>
+
+    <label for="cvvCode" style="text-align: center;">CVV Code </label> 
+    <input id ="cvvCode" name="cvvCode" type="text" > <br> <br>
+
 
     <button class="btn" (click)="registerButtonClicked()" (click)="clearInputFields()">Register</button>
     <br>
+
 </div>
 
-<br>
+<br> 
 
 <p class="failure-message-box" *ngIf="displayFailureMessage">Registration failed. Please make sure all fields are correct and try again.</p>
 
