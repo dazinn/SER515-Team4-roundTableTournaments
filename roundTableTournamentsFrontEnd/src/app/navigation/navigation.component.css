@@ -4,7 +4,7 @@
 /* Sytling for nav-wrapper (a div tag class to hold the buttons for navigation). */
 .nav-wrapper {
     background-color: dimgray;
-        
+    align-items: center;
 }
 
 /* Styling for list elements. */
@@ -12,11 +12,13 @@ ul {
     background-color: darkorchid;
     list-style-type: none; /* This attribute removes the bullet points in the list when set to "none" */
     padding: 0px;
+    align-items: center;
 }
 
 /* Styling for list items. */
 li {
     float: left;
+    display: flex;
 }
 
 /* Styling for elements with <li> and <a> tags (navigation buttons).  */
@@ -25,6 +27,7 @@ li a {
     color: black;
     padding: 15px 20px;
     text-decoration: none; /* This attribute removes the decoration on text. In this case, the underlining of link items */
+    display: flex;
 }
 
 /* When the user hovers over an element with the tags <li> and <a> (in this app,
@@ -36,4 +39,6 @@ li a:hover {
     color: white; /* Text color */
     border-color: black;
     border-style: solid;
+    display: flex;
 }
+
