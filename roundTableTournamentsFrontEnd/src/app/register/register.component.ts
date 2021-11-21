@@ -10,6 +10,7 @@ export class RegisterComponent implements OnInit {
 
   public displaySuccessMessage = false
   public displayFailureMessage = false
+  public teamArray = []
 
   constructor() { }
 
@@ -44,6 +45,8 @@ export class RegisterComponent implements OnInit {
       this.displayFailureMessage = true
       this.displaySuccessMessage = false
     } else {
+      this.addExampleTeamsToArray();
+      
       this.displayFailureMessage = false
       this.displaySuccessMessage = true
     }
@@ -54,5 +57,38 @@ export class RegisterComponent implements OnInit {
     //TODO:Implement
   }
 
+  // Create and add 6 example teams to the array of teams
+  addExampleTeamsToArray() {
+    let team1 = new Team("White Knights", "wk@example.com", "Male", "U8");
+    let team2 = new Team("Black Knights", "bk@example.com", "Female", "U8");
+    let team3 = new Team("Thundercats", "tc@example.com", "Male", "U8");
+    let team4 = new Team("Cactus Crawlers", "cc@example.com", "Male", "U8");
+    let team5 = new Team("Storm", "s@example.com", "Female", "U8");
+    let team6 = new Team("Terra Time", "tt@example.com", "Female", "U8");
+    this.teamArray.push(team1);
+    this.teamArray.push(team2);
+    this.teamArray.push(team3);
+    this.teamArray.push(team4);
+    this.teamArray.push(team5);
+    this.teamArray.push(team6);
+    console.log("Adding example teams to array");
+  }
+
+
+}
+
+// An object of class Team represents a team that has been added to the tournament
+class Team {
+  teamName: string;
+  contactEmail: string;
+  genderGroup: string;
+  ageGroup: string;
+
+  constructor(name: string, email: string, gender: string, age: string) {
+    this.teamName = name;
+    this.contactEmail = email;
+    this.genderGroup = gender;
+    this.ageGroup = age;
+  }
 
 }
