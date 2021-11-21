@@ -45,8 +45,10 @@ export class RegisterComponent implements OnInit {
       this.displayFailureMessage = true
       this.displaySuccessMessage = false
     } else {
-      this.addExampleTeamsToArray();
-      
+      //this.addExampleTeamsToArray(); // This line can be uncommented to add hardcoded example teams to the team array
+
+      this.addNewTeamToArray();
+
       this.displayFailureMessage = false
       this.displaySuccessMessage = true
     }
@@ -54,10 +56,17 @@ export class RegisterComponent implements OnInit {
 
   // Clear input fields when button is clicked
   clearInputFields() {
-    //TODO:Implement
+    (<HTMLInputElement>document.getElementById("teamName")).value = '';
+    (<HTMLInputElement>document.getElementById("email")).value = '';
+    (<HTMLInputElement>document.getElementById("genderGroup")).value = '';
+    (<HTMLInputElement>document.getElementById("ageGroup")).value = '';
+    (<HTMLInputElement>document.getElementById("cardNum")).value = '';
+    (<HTMLInputElement>document.getElementById("cardHolder")).value = '';
+    (<HTMLInputElement>document.getElementById("expirationDate")).value = '';
+    (<HTMLInputElement>document.getElementById("cvvCode")).value = '';
   }
 
-  // Create and add 6 example teams to the array of teams
+  // Create and add example teams to the array of teams
   addExampleTeamsToArray() {
     let team1 = new Team("White Knights", "wk@example.com", "Male", "U8");
     let team2 = new Team("Black Knights", "bk@example.com", "Female", "U8");
@@ -71,9 +80,19 @@ export class RegisterComponent implements OnInit {
     this.teamArray.push(team4);
     this.teamArray.push(team5);
     this.teamArray.push(team6);
-    console.log("Adding example teams to array");
+    console.log("Added example teams to team array");
   }
 
+  // Create a new Team object based on input fields and add it to the array of teams
+  addNewTeamToArray() {
+    let name = (<HTMLInputElement>document.getElementById("teamName")).value;
+    let email = (<HTMLInputElement>document.getElementById("email")).value;
+    let gender = (<HTMLInputElement>document.getElementById("genderGroup")).value;
+    let age = (<HTMLInputElement>document.getElementById("ageGroup")).value;
+    let newTeam = new Team(name, email, gender, age);
+    this.teamArray.push(newTeam);
+    console.log("Added team '" + name + "' to team array");
+  }
 
 }
 
