@@ -11,22 +11,21 @@ export class LoginComponent implements OnInit {
   constructor() { }
       
   ngOnInit(): void {
-    this.addExampleUsersToArray();
+    this.addUsersToArray();
   }
-  addExampleUsersToArray()
+  addUsersToArray()
   {
-    let user1 = new User("Alice", "aaa");
-    let user2 = new User("John", "bbb");
-    let user3 = new User("Mark", "ccc");
-    let user4 = new User("Ana", "ddd");
-    let user5 = new User("John", "eee");
-    let user6 = new User("Lee", "fff");
+    let user1 = new User("TeamDirectorAccount", "aaa","teamDirector");
+    let user2 = new User("RefereeDirectorAccount", "bbb", "refereeDirector");
+    let user3 = new User("TournamentDirectorAccount", "ccc","tournamentDirector");
+    let user4 = new User("FieldDirectorAccount", "ddd","fieldDirector");
+     
     this.userArray.push(user1);
     this.userArray.push(user2);
     this.userArray.push(user3);
     this.userArray.push(user4);
-    this.userArray.push(user5);
-    this.userArray.push(user6);
+     
+
     console.log("Adding example users to array");
 
   }
@@ -36,11 +35,12 @@ export class LoginComponent implements OnInit {
 class User {
   username: string;
   password: string;
+  userType: string;
 
-
-  constructor(user: string, pass: string){
+  constructor(user: string, pass: string, ut: string ){
     this.username = user;
     this.password = pass;
+    this.userType = ut;
   }
 
 
