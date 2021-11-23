@@ -15,10 +15,10 @@ export class LoginComponent implements OnInit {
   }
   addUsersToArray()
   {
-    let user1 = new User("TeamDirectorAccount", "aaa","teamDirector");
-    let user2 = new User("RefereeDirectorAccount", "bbb", "refereeDirector");
-    let user3 = new User("TournamentDirectorAccount", "ccc","tournamentDirector");
-    let user4 = new User("FieldDirectorAccount", "ddd","fieldDirector");
+    let user1 = new User("TeamDirectorAccount", "aaaa","teamDirector");
+    let user2 = new User("RefereeDirectorAccount", "bbbb", "refereeDirector");
+    let user3 = new User("TournamentDirectorAccount", "cccc","tournamentDirector");
+    let user4 = new User("FieldDirectorAccount", "dddd","fieldDirector");
      
     this.userArray.push(user1);
     this.userArray.push(user2);
