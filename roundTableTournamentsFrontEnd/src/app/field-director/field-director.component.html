@@ -10,7 +10,8 @@
 <div class="scoresInput">
         <!-- Input fields for entering scores-->
         <br/>
-        <h3 style="text-align: left;">Enter Match scores</h3>
+        <h3 style="text-align: left;">Enter Match Scores</h3>
+        <p>This section is used to enter scores for a match.</p>
         <br/>
         <label for="Match_ID" style="text-align: center;">Match_ID: </label> 
         <input id ="Match_ID" name="Match_ID" type="text"> <br>
@@ -42,3 +43,38 @@
         
         <button class="btn">Save</button>
 </div>
+
+<br> <br>
+
+<div class="fieldInput">
+        <!-- Input fields for entering information about soccer fields-->
+        <h3 style="text-align: left;">Enter Field Inforamtion</h3>
+        <p>This section is used to add a new soccer field to the tournament.</p>
+
+        <br>
+
+        <h5>Existing Soccer Fields in the Tournament (Name , Size)</h5>
+
+        <div *ngFor='let soccerField of soccerFieldArray'> <b>Field:</b> {{soccerField.fieldNum}} , {{soccerField.fieldSize}}</div>
+
+        <br>
+
+        <label for="field_num">Field Number: </label> 
+        <input id ="field_num" name="field_num" type="text"> <br>
+        <label for="field_size">Field Size:  </label> 
+        <select name="field_size" id="field_size">
+                <option></option> 
+                <option value="small">Small</option>
+                <option value="medium">Medium</option>
+                <option value="large">Large</option>
+        </select> <br>
+
+        <button class="btn" (click)="saveSoccerFieldButtonClicked()" (click)="clearInputFields()">Save</button>
+
+        <p class="failure-message-box" *ngIf="displaySoccerFieldFailureMessage">Adding soccer field failed. Please make sure all fields are correct and try again.</p>
+
+        <p class="success-message-box" *ngIf="displaySoccerFieldSuccessMessage">Adding soccer field succeeded!</p>
+        
+
+</div>
+

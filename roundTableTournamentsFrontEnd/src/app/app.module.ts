@@ -10,6 +10,7 @@ import { ResultsComponent } from './results/results.component';
 import { TournamentDirectorComponent } from './tournament-director/tournament-director.component';
 import { TeamDirectorComponent } from './team-director/team-director.component'; 
 import { RegisterComponent } from './register/register.component';
+import { FieldDirectorComponent } from './field-director/field-director.component';
 
 
 
@@ -23,7 +24,8 @@ import { RegisterComponent } from './register/register.component';
     ResultsComponent,
     TournamentDirectorComponent,
     TeamDirectorComponent,
-    RegisterComponent
+    RegisterComponent,
+    FieldDirectorComponent
   ],
   imports: [
     BrowserModule,
