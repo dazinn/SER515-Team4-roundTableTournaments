@@ -1,5 +1,6 @@
 import { TEMPORARY_NAME } from '@angular/compiler/src/render3/view/util';
 import { Component, OnInit } from '@angular/core';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-register',
@@ -10,11 +11,26 @@ export class RegisterComponent implements OnInit {
 
   public displaySuccessMessage = false
   public displayFailureMessage = false
+  public teamArrayInitialized = false
   public teamArray = []
+
+  
 
   constructor() { }
 
   ngOnInit(): void {
+    // Only initialize team array once
+    if(!this.teamArrayInitialized) {
+      this.addExampleTeamsToArray(); 
+      this.teamArrayInitialized = true;
+    }
+    
+  }
+
+  // Function for other components to get teamArray 
+  getTeamArray() 
+  {
+    return this.teamArray;
   }
 
   /* Function that is called when the Register button is clicked. */
@@ -68,18 +84,43 @@ export class RegisterComponent implements OnInit {
 
   // Create and add example teams to the array of teams
   addExampleTeamsToArray() {
-    let team1 = new Team("White Knights", "wk@example.com", "Male", "U8");
-    let team2 = new Team("Black Knights", "bk@example.com", "Female", "U8");
-    let team3 = new Team("Thundercats", "tc@example.com", "Male", "U8");
-    let team4 = new Team("Cactus Crawlers", "cc@example.com", "Male", "U8");
-    let team5 = new Team("Storm", "s@example.com", "Female", "U8");
-    let team6 = new Team("Terra Time", "tt@example.com", "Female", "U8");
-    this.teamArray.push(team1);
-    this.teamArray.push(team2);
-    this.teamArray.push(team3);
-    this.teamArray.push(team4);
-    this.teamArray.push(team5);
-    this.teamArray.push(team6);
+    let u8MaleTeam1 = new Team("White Knights", "wk@example.com", "Male", "U8");
+    let u8MaleTeam2 = new Team("Thundercats", "t@example.com", "Male", "U8");
+    let u8MaleTeam3 = new Team("Cactus Crawlers", "cc@example.com", "Male", "U8");
+    let u8MaleTeam4 = new Team("Storm", "s@example.com", "Male", "U8");
+
+    let u8FemaleTeam1 = new Team("Terra Time", "tt@example.com", "Female", "U8");
+    let u8FemaleTeam2 = new Team("Black Knights", "bk@example.com", "Female", "U8");
+    let u8FemaleTeam3 = new Team("Lions", "l@example.com", "Female", "U8");
+    let u8FemaleTeam4 = new Team("Wolves", "w@example.com", "Female", "U8");
+
+    let u9MaleTeam1 = new Team("Red Gorillas", "rg@example.com", "Male", "U9");
+    let u9MaleTeam2 = new Team("Heatwave", "hw@example.com", "Male", "U9");
+    let u9MaleTeam3 = new Team("Rainstorm", "rs@example.com", "Male", "U9");
+    let u9MaleTeam4 = new Team("Panthers", "p@example.com", "Male", "U9");
+
+    let u9FemaleTeam1 = new Team("Leopards", "l@example.com", "Female", "U9");
+    let u9FemaleTeam2 = new Team("Mountain Goats", "mg@example.com", "Female", "U9");
+    let u9FemaleTeam3 = new Team("Blue Tigers", "bt@example.com", "Female", "U9");
+    let u9FemaleTeam4 = new Team("Foxes", "f@example.com", "Female", "U9");
+    
+    this.teamArray.push(u8MaleTeam1);
+    this.teamArray.push(u8MaleTeam2);
+    this.teamArray.push(u8MaleTeam3);
+    this.teamArray.push(u8MaleTeam4);
+    this.teamArray.push(u8FemaleTeam1);
+    this.teamArray.push(u8FemaleTeam2);
+    this.teamArray.push(u8FemaleTeam3);
+    this.teamArray.push(u8FemaleTeam4);
+    this.teamArray.push(u9MaleTeam1);
+    this.teamArray.push(u9MaleTeam2);
+    this.teamArray.push(u9MaleTeam3);
+    this.teamArray.push(u9MaleTeam4);
+    this.teamArray.push(u9FemaleTeam1);
+    this.teamArray.push(u9FemaleTeam2);
+    this.teamArray.push(u9FemaleTeam3);
+    this.teamArray.push(u9FemaleTeam4);
+
     console.log("Added example teams to team array");
   }
 

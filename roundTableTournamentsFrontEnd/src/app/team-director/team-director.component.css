@@ -8,3 +8,23 @@
     box-shadow: 5px 5px 5px rgb(99, 80, 80);
     max-width: 1000px;
 }
+
+.success-message-box {
+    background-color: rgb(68, 201, 86);
+    border-color: black;
+    border-style: solid;
+    padding: 5px;
+    font-size: medium;
+    box-shadow: 5px 5px 5px grey;
+    max-width: 1000px;
+}
+
+.failure-message-box {
+    background-color: rgb(201, 72, 68);
+    border-color: black;
+    border-style: solid;
+    padding: 5px;
+    font-size: medium;
+    box-shadow: 5px 5px 5px grey;
+    max-width: 1000px;
+}
