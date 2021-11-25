@@ -4,3 +4,19 @@
     <h4>Team Director</h4>
     
 </div>
+
+<div>
+    <br>
+
+    <h3 style="text-align: left;">Generate Match Schedule</h3>
+    <p>Press the button to generate the Tournament Match Schedule.</p>
+
+    <button class="btn" (click)="generateSchedule()">Generate Schedule</button>
+
+    <br> <br>
+
+    <p class="failure-message-box" *ngIf="displayFailureMessage">Schedule was not generated. Please try again.</p>
+
+    <!-- NOTE: this will NOT be viewable in the Results page until that feature is implemented! For now, the schedule is viewable in the console. -->
+    <p class="success-message-box" *ngIf="displaySuccessMessage">Schedule was generated successfully! It can be viewed in the console in developer tools (use 'ctrl+shift+i') (TODO: change the previous sentence to be "It can be viewed in the Results page.")</p> 
+</div>
