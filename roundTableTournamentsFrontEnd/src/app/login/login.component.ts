@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import {FormBuilder} from '@angular/forms';
+import{FormsModule,ReactiveFormsModule} from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -6,10 +9,78 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-
-  constructor() { }
-
+  public userArray = []
+  
+  constructor(private fb: FormBuilder,private router: Router) { }
+      
   ngOnInit(): void {
+    this.addUsersToArray();
   }
+
+  loginForm = this.fb.group({
+    username: [null],
+    password: [null],
+    usertype: [null]
+  });
+
+  addUsersToArray()
+  {
+    let user1 = new User("TeamDirectorAccount", "aaaa","teamDirector");
+    let user2 = new User("RefereeDirectorAccount", "bbbb", "refereeDirector");
+    let user3 = new User("TournamentDirectorAccount", "cccc","tournamentDirector");
+    let user4 = new User("FieldDirectorAccount", "dddd","fieldDirector");
+     
+    this.userArray.push(user1);
+    this.userArray.push(user2);
+    this.userArray.push(user3);
+    this.userArray.push(user4);
+     
+
+    console.log("Adding example users to array");
+
+  }
+  onSubmit() 
+  {
+	  if (this.loginForm.valid) 
+	  {
+		 this.userArray.forEach( (User) => {
+			if(User.username == this.loginForm.get('username') && User.password == this.loginForm.get('password'))
+			{
+				if(User.userType = "teamDirector"){
+					this.router.navigate(['/team-director.component.html']);
+          console.log("teamDirector");
+        }
+				else if(User.userType = "refereeDirector")
+          this.router.navigate(['/referee-director.component.html']);
+				else if(User.userType = "tournamentDirector")
+          this.router.navigate(['/tournament-director.component.html']);
+				else if(User.userType = "fieldDirector")
+          this.router.navigate(['/field-director.component.html']);
+				
+			}
+		});
+		
+		this.loginForm.reset();
+	  }
+    else
+    {
+    console.log("Invalid Credentials");
+		this.loginForm.reset();
+    }
+  }
+
+}
+
+class User {
+  username: string;
+  password: string;
+  userType: string;
+
+  constructor(user: string, pass: string, ut: string ){
+    this.username = user;
+    this.password = pass;
+    this.userType = ut;
+  }
+
 
 }

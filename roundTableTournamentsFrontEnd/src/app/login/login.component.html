@@ -1,25 +1,21 @@
 <html>
 <head>
-<title>Javascript Login Form Validation</title>
+<title>Login Form</title>
 <!-- Include CSS File Here -->
 <link rel="stylesheet" href="login.component.css"/>
-<!-- Include JS File Here -->
-<script src="login.component.js"></script>
 </head>
 <body>
 <div class="container">
 <div class="main">
-<h2>Login Form </h2>
-<form id="form_id" method="post" name="myform">
+<h2>Login Form</h2>
+ <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
 <label>User Name :</label>
-<input type="text" name="username" id="username"/>
+<input type="text" placeholder="Username" formControlName="username">
 <label>Password :</label>
-<input type="password" name="password" id="password"/>
-<input type="button" value="Login" id="submit" onclick="validate()"/>
+<input type="password" placeholder="Password" formControlName="password">
+<button type="submit">Login</button>
 </form>
-<span><b class="note">Note : </b>Use the following format for username and password. <br/><b class="valid">User Name : ABC<br/>Password : ABC@#123</b></span>
 </div>
 </div>
 </body>
 </html>
-

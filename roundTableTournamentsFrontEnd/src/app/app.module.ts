@@ -10,6 +10,7 @@ import { ResultsComponent } from './results/results.component';
 import { TournamentDirectorComponent } from './tournament-director/tournament-director.component';
 import { TeamDirectorComponent } from './team-director/team-director.component'; 
 import { RegisterComponent } from './register/register.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -27,7 +28,9 @@ import { RegisterComponent } from './register/register.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
