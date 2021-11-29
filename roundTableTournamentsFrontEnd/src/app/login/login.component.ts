@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import {FormBuilder} from '@angular/forms';
+import{FormsModule,ReactiveFormsModule} from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -8,11 +11,19 @@ import { Component, OnInit } from '@angular/core';
 export class LoginComponent implements OnInit {
   public userArray = []
   
-  constructor() { }
+  constructor(private fb: FormBuilder,private router: Router) { }
       
   ngOnInit(): void {
     this.addUsersToArray();
   }
+
+  loginForm = this.fb.group({
+    username: [null],
+    password: [null],
+    usertype: [null]
+  });
+
+
   addUsersToArray()
   {
     let user1 = new User("TeamDirectorAccount", "aaaa","teamDirector");
@@ -27,6 +38,46 @@ export class LoginComponent implements OnInit {
      
 
     console.log("Adding example users to array");
+
+
+  }
+  onSubmit() 
+  {
+    
+	  if (this.loginForm.valid) 
+	  {
+      
+		 this.userArray.forEach( (user) => {
+      
+      var un=(<HTMLInputElement>document.getElementById("loginUser")).value;
+      var pw=(<HTMLInputElement>document.getElementById("loginPassword")).value;
+      if(un=="TeamDirectorAccount"&&pw=="aaaa"&&user.userType =="teamDirector")
+			{
+        this.router.navigate(['/team-director']);
+      }
+      if(un=="RefereeDirectorAccount"&&pw=="bbbb"&&user.userType =="refereeDirector")
+			{
+        this.router.navigate(['/referee-director']);
+      }
+      if(un=="TournamentDirectorAccount"&&pw=="cccc"&&user.userType =="tournamentDirector")
+			{
+        this.router.navigate(['/tournament-director']);
+      }
+      if(un=="FieldDirectorAccount"&&pw=="dddd"&&user.userType =="fieldDirector")
+			{
+        this.router.navigate(['/field-director']);
+      }
+      
+				
+		});
+		
+		this.loginForm.reset();
+	  }
+    else
+    {
+    console.log("Invalid Credentials");
+		this.loginForm.reset();
+    }
 
   }
   
@@ -45,3 +96,4 @@ class User {
 
 
 }
+

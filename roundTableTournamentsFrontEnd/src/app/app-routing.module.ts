@@ -11,6 +11,7 @@ import { FieldDirectorComponent } from './field-director/field-director.componen
 import { TeamDirectorComponent } from './team-director/team-director.component';
 import { TournamentDirectorComponent } from './tournament-director/tournament-director.component';
 import { RegisterComponent } from './register/register.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 /* Array of different routes which can be displayed, in the form:
@@ -35,6 +36,7 @@ const routes: Routes = [
   declarations: [],
   imports: [
     RouterModule.forRoot(routes) // This configures the router with the array of routes declared above.
+
   ],
   exports: [
     RouterModule
