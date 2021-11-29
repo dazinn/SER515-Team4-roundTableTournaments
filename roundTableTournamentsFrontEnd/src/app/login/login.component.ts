@@ -41,23 +41,32 @@ export class LoginComponent implements OnInit {
   }
   onSubmit() 
   {
+    
 	  if (this.loginForm.valid) 
 	  {
-		 this.userArray.forEach( (User) => {
-			if(User.username == this.loginForm.get('username') && User.password == this.loginForm.get('password'))
+      
+		 this.userArray.forEach( (user) => {
+      
+      var un=(<HTMLInputElement>document.getElementById("loginUser")).value;
+      var pw=(<HTMLInputElement>document.getElementById("loginPassword")).value;
+      if(un=="TeamDirectorAccount"&&pw=="aaaa"&&user.userType =="teamDirector")
 			{
-				if(User.userType = "teamDirector"){
-					this.router.navigate(['/team-director.component.html']);
-          console.log("teamDirector");
-        }
-				else if(User.userType = "refereeDirector")
-          this.router.navigate(['/referee-director.component.html']);
-				else if(User.userType = "tournamentDirector")
-          this.router.navigate(['/tournament-director.component.html']);
-				else if(User.userType = "fieldDirector")
-          this.router.navigate(['/field-director.component.html']);
+        this.router.navigate(['/team-director']);
+      }
+      if(un=="RefereeDirectorAccount"&&pw=="bbbb"&&user.userType =="refereeDirector")
+			{
+        this.router.navigate(['/referee-director']);
+      }
+      if(un=="TournamentDirectorAccount"&&pw=="cccc"&&user.userType =="tournamentDirector")
+			{
+        this.router.navigate(['/tournament-director']);
+      }
+      if(un=="FieldDirectorAccount"&&pw=="dddd"&&user.userType =="fieldDirector")
+			{
+        this.router.navigate(['/field-director']);
+      }
+      
 				
-			}
 		});
 		
 		this.loginForm.reset();

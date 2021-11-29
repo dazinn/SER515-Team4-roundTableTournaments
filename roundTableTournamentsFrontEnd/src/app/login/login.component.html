@@ -9,10 +9,10 @@
 <div class="main">
 <h2>Login Form</h2>
  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
-<label>User Name :</label>
-<input type="text" placeholder="Username" formControlName="username">
-<label>Password :</label>
-<input type="password" placeholder="Password" formControlName="password">
+<label>User Name:</label>
+<input type="text" placeholder="Username" id="loginUser">
+<label>Password:</label>
+<input type="password" placeholder="Password" id="loginPassword">
 <button type="submit">Login</button>
 </form>
 </div>
