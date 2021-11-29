@@ -3,22 +3,37 @@
 
 /* Sytling for nav-wrapper (a div tag class to hold the buttons for navigation). */
 .nav-wrapper {
-    background-color: dimgray;
+    background-color: rgb(110, 196, 196); /* Note: change this color to visualize the wrappers in the app */
     align-items: center;
+    margin: 0 center;
+    position: relative;
+
+    /* Used to center nav bar */
+    padding-left: 10%; 
+    padding-right: 10%;
+    max-width: 1000px;
+    min-width: 1000px;
 }
+
 
 /* Styling for list elements. */
 ul {
-    background-color: darkorchid;
+    background-color: rgb(110, 196, 196); /* Note: change this color to visualize the wrappers in the app */
     list-style-type: none; /* This attribute removes the bullet points in the list when set to "none" */
     padding: 0px;
     align-items: center;
+    margin: 0;
+    overflow: hidden;
+
+    /* Used to center nav bar */
+    padding-left: 14%;
+    
 }
 
 /* Styling for list items. */
 li {
-    float: left;
-    display: flex;
+    float: left; /* TODO: change this????*/
+    display: inline;
 }
 
 /* Styling for elements with <li> and <a> tags (navigation buttons).  */

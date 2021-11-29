@@ -11,6 +11,8 @@ import { TournamentDirectorComponent } from './tournament-director/tournament-di
 import { TeamDirectorComponent } from './team-director/team-director.component'; 
 import { RegisterComponent } from './register/register.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FieldDirectorComponent } from './field-director/field-director.component';
+
 
 
 
@@ -24,7 +26,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     ResultsComponent,
     TournamentDirectorComponent,
     TeamDirectorComponent,
-    RegisterComponent
+    RegisterComponent,
+    FieldDirectorComponent
   ],
   imports: [
     BrowserModule,
