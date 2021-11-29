@@ -23,6 +23,7 @@ export class LoginComponent implements OnInit {
     usertype: [null]
   });
 
+
   addUsersToArray()
   {
     let user1 = new User("TeamDirectorAccount", "aaaa","teamDirector");
@@ -37,6 +38,7 @@ export class LoginComponent implements OnInit {
      
 
     console.log("Adding example users to array");
+
 
   }
   onSubmit() 
@@ -76,8 +78,9 @@ export class LoginComponent implements OnInit {
     console.log("Invalid Credentials");
 		this.loginForm.reset();
     }
-  }
 
+  }
+  
 }
 
 class User {
@@ -93,3 +96,4 @@ class User {
 
 
 }
+
